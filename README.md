@@ -1,80 +1,78 @@
 # Rust Todo CLI + TUI
 
-一个功能完整、代码清晰的 Rust 待办事项工具，同时支持 **命令行（CLI）** 和 **终端图形界面（TUI）**。
+A full-featured, clean-coded Rust to-do tool that supports both command line (CLI) and terminal graphical interface (TUI).**。
 
 ![Rust Todo TUI](https://github.com/Tim5500/rust-todo/releases/download/v0.3.0/rust-todo-tui-screenshot.png)  
-*(TUI 界面截图 - 可后续补充)*
+*(TUI interface screenshot - can be added later)*
 
-## ✨ 功能亮点
+## ✨ Feature Highlights
 
-- **CLI 命令行模式**：快速添加、查看、编辑、删除任务
-- **TUI 图形界面**：支持键盘操作（上下键、空格切换完成、删除等），美观易用
-- 支持任务字段：标题、开始日期、截止日期、优先级、遇到的困难、解决方法、备注
-- 支持导出 / 导入 JSON 备份
-- 支持 Git 自动同步（todos.json）
-- 数据自动持久化保存（完全离线，本地使用）
-- Windows 原生 exe，绿色免安装
+- **CLI command line mode**: quickly add, view, edit, and delete tasks
+- **TUI graphical interface**: supports keyboard operations (up and down keys, space switching completion, deletion, etc.), beautiful and easy to use
+- Support task fields: title, start date, deadline, priority, difficulties encountered, solutions, notes
+- Support export/import JSON backup
+- Support Git automatic synchronization (todos.json)
+- Automatic data persistence (completely offline, local use)
+- Windows native exe, green and installation-free
 
-## 📥 下载
+## 📥 Download
 
-**最新版本 v0.3.0**（2026-04-16）
+**Latest version v0.3.0** (2026-04-16)
 
-- [rust-todo.exe](https://github.com/Tim5500/rust-todo/releases/download/v0.3.0/rust-todo.exe) （CLI 命令行版）
-- [rust-todo-tui.exe](https://github.com/Tim5500/rust-todo/releases/download/v0.3.0/rust-todo-tui.exe) （TUI 图形界面版）
+- [rust-todo.exe](https://github.com/Tim5500/rust-todo/releases/download/v0.3.0/rust-todo.exe) (CLI command line version)
+- [rust-todo-tui.exe](https://github.com/Tim5500/rust-todo/releases/download/v0.3.0/rust-todo-tui.exe) (TUI graphical interface version)
 
-直接下载后双击运行即可使用，无需安装。
+After downloading directly, double-click to run it and you can use it without installation.
 
-## 🚀 使用方法
-
-### CLI 命令行版
+### CLI command line version
 
 ```powershell
-# 查看所有任务
+# View all tasks
 .\rust-todo.exe list
 
-# 添加任务（支持空格）
-.\rust-todo.exe add "学习 Rust 所有权与借用" -p high -s 2026-04-16 -d 2026-04-30
+#Add task (supports spaces)
+.\rust-todo.exe add "Learn Rust Ownership and Borrowing" -p high -s 2026-04-16 -d 2026-04-30
 
-# 查看待办任务
+# View to-do tasks
 .\rust-todo.exe list -t todo
 
-# 搜索任务
+# Search tasks
 .\rust-todo.exe list -q rust
 
-# 进入 TUI 图形界面
+# Enter the TUI graphical interface
 .\rust-todo-tui.exe
 
-TUI 图形界面版（推荐）
+TUI graphical interface version (recommended)
 
-运行 rust-todo-tui.exe 后：
+After running rust-todo-tui.exe:
 
-    ↑ ↓ 或 j k：上下移动选择
-    空格：切换完成 / 未完成状态
-    r：删除选中任务
-    s：保存并退出
-    q：退出程序
-    h：显示帮助
+    ↑ ↓ or j k: Move selection up and down
+    Space: switch completed/incomplete status
+    r: Delete the selected task
+    s: save and exit
+    q: Exit the program
+    h: show help
 
-📁 项目结构
+📁 Project structure
 
-    src/main.rs → CLI 主程序
-    src/main_tui.rs → TUI 图形界面
-    数据文件默认保存在：%APPDATA%\rust-todo\todos.json
+    src/main.rs → CLI main program
+    src/main_tui.rs → TUI graphical interface
+    The data file is saved in: %APPDATA%\rust-todo\todos.json by default
 
-🛠️ 开发与构建
+🛠️Develop and build
 
-# 编译 CLI
+# Compile CLI
 cargo build --release
 
-# 编译 TUI
+# Compile TUI
 cargo build --release --bin rust-todo-tui
 
-生成的 exe 文件位于 target\x86_64-pc-windows-gnu\release\
-🤝 欢迎贡献
+The generated exe file is located at target\x86_64-pc-windows-gnu\release\
+🤝 Contributions welcome
 
-欢迎提交 Issue、Pull Request 或反馈建议！
+Welcome to submit Issues, Pull Requests or feedback suggestions!
 
-    Star 这个项目表示支持
-    有任何功能需求（如标签系统、提醒、暗黑模式等）欢迎告诉我
+    Star This project expresses support
+    If you have any functional requirements (such as label system, reminder, dark mode, etc.), please let me know
 
 Made with ❤️ using Rust
